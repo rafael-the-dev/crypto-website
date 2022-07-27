@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-gradient {
+  /* Set the background size and repeat properties. */
+  background-clip: text;
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+#root {
+  background-color: #F2F4FF;
+  min-height: 100vh;
+}
+
+.bg-transition {
+  transition: background 1s ease-in;
+}
+
+.text-transition {
+  transition: color 1s ease-in;
+}
+
+.remove-root-padding {
+  padding: 0 !important;
+}
+
+.remove-root-bg {
+  background-color: #FFF !important;
+}
+
+.user-message {
+  background-color: #D9E5E9;
+}
+
+.other-message {
+  background-color: #48B0D0;
+}
+
+.sub-root {
+  min-height: 95vh;
+}
+
+.image-gallery-svg { 
+  height: 32px !important;
+  width: 19px !important;
+}
+
+@media screen  and (min-width: 900px){
+  #root {
+    display: flex;
+    padding-left: 60px;
+  }
+
+  .sub-root {
+    box-shadow: 0px 43px 50px 9px rgb(0 0 0 / 6%);
+    width: 410px;
+  }
+}

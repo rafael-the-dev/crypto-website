@@ -1,0 +1,138 @@
+.contactMeButton {
+    background-image: linear-gradient(to right, #ea580c, #db2777);
+    transition: background-image 1s ease-in;
+    padding-bottom: .7rem;
+    padding-top: .7rem;
+}
+
+.contactMeButton:hover {
+    background-image: linear-gradient(70deg, #db2777, #ea580c);
+}
+
+.position {
+    background-image: linear-gradient(45deg, #ea580c, #ef4444);
+}
+
+.heroImageContainer {
+    background-color: #323232;
+    height: 200px;
+    margin-right: 2rem;
+    overflow: hidden;
+    transform: rotate(45deg);
+    width: 200px;
+}
+
+.heroImage {
+    height: 250px;
+    transform: rotate(-45deg) translate(0px, -23px);
+    width: 250px;
+}
+
+.aboutImage {
+    height: auto;
+    width: 100%;
+}
+
+.aboutTitle::before {
+    content: "About";
+    color: #ea580c;
+    display: block;
+    font-size: 1.25rem;
+    margin: .8rem auto 1.2rem auto;
+}
+
+.aboutTitle {
+    font-size: 1.4rem;
+}
+
+.toolsContainer {
+    background-color: #373F68;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.totalSuggestions::before{
+    background-image: url(/images/icons/icon-suggestions.svg);
+    background-repeat: 'no-repeat';
+    background-size: 'contain';
+    content: "";
+    display: inline-block;
+    height: 22px;
+    margin-right: 10px;
+    width: 22px;
+}
+
+.sortHighlightText {
+    margin-left: 8px;
+}
+
+.addFeedbackButton {
+    background-color: #AD1FEA !important;
+    border-radius: 11px !important;
+    padding: 9px 16px !important;
+}
+
+.popoverRoot {
+    top: 111px !important;
+}
+
+.filterList {
+    width: 244px;
+}
+
+.filterListItem {
+    border-bottom: 1px solid #979797d6;
+}
+
+.filterListItem:last-child {
+    border-bottom: none;
+}
+
+.filterListItem:hover {
+    color: #AD1FEA !important;
+}
+
+.filterListItemText {
+    color: #647196;
+}
+
+.filterListIcon {
+    color: #AD1FEA !important;
+    min-width: 23px !important
+}
+
+.noFeedbackSection {
+    min-height: 70vh;
+}
+
+@media screen and (min-width: 600px) {
+    .toolsContainer {
+        border-radius: 12px;
+        padding-left: 1.5rem;
+        padding-right: 1.2rem;
+    }
+    
+}
+
+@media screen and (min-width: 900px) {
+    .hero {
+        height: 400px;
+    }
+    
+    .aboutImage {
+        width: 420px;
+    }
+
+    .aboutTitle {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .portfolioList {
+        display: grid;
+        grid-template-columns: 31% 31% 31%;
+        grid-template-rows: 250px 250px;
+        grid-gap: 1.8rem 2.333%;
+    }
+}
