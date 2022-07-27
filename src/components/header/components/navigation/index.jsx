@@ -1,6 +1,6 @@
 import classNames  from "classnames";
 import { Typography } from "@mui/material";
-import Link from "next/link"
+import Link from "src/components/link"
 
 import classes from "./styles.module.css"
 
@@ -23,10 +23,10 @@ const Navigation = ({ open }) => {
             <li 
                 key={index} 
                 className="mb-4 last:mb-0">
-                <Link href={item.href} passHref>
-                    <Typography className="text-white uppercase" component="a">
-                        { item.label }
-                    </Typography>
+                <Link 
+                    className="text-white uppercase"
+                    href={item.href}>
+                    { item.label }
                 </Link>
             </li>
         )
