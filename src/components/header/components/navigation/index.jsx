@@ -2,7 +2,9 @@ import classNames  from "classnames";
 import { Typography } from "@mui/material";
 import Link from "src/components/link"
 
-import classes from "./styles.module.css"
+import classes from "./styles.module.css";
+
+import SubList from "./components/sub-list";
 
 const Navigation = ({ open }) => {
     const list = [
@@ -11,15 +13,23 @@ const Navigation = ({ open }) => {
         { label: "Services", href: "services" },
         { label: "pricing", href: "pricing" },
         { label: "Blog", list: [
-            { label: "Blog 1" },
-            { label: "Blog 2"},
-            { label: "Blog 3"},
+            { label: "Blog 1", href: "/" },
+            { label: "Blog 2", href: "/" },
+            { label: "Blog 3", href: "/" },
+        ] },
+        { label: "Pages", list: [
+            { label: "Register page", href: "/" },
+            { label: "Login page", href: "/" },
+            { label: "Shopping cart", href: "/" },
+            { label: "Shopping checkout", href: "/" },
+            { label: "FAQ page", href: "/" },
+            { label: "404 page", href: "/" },
         ] },
         { label: "Contact", href: "contact" }
     ];
 
     const genetateList = () => list.map((item, index) => (
-        item.list ? <></> : (
+        item.list ? <SubList key={index} { ...item } /> : (
             <li 
                 key={index} 
                 className="mb-4 last:mb-0">
@@ -34,10 +44,10 @@ const Navigation = ({ open }) => {
 
     return (
         <>
-            <nav className={classNames(classes.transition, "relative ", open ? "" : "h-0 overflow-hidden")}>
+            <nav className={classNames(classes.transition, "relative", open ? "overflow-visible h-auto" : "h-0 overflow-hidden")}>
                 <ul  
                     className={classNames("absolute bg-neutral-900 flex flex-col items-center w-full z-20",
-                    classes.transition, open ? "h-fit py-6": "h-0")}>
+                    classes.transition, open ? "h-auto py-6": "h-0")}>
                     {
                         genetateList()
                     }
