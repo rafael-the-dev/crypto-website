@@ -40,7 +40,7 @@ const Header = () => {
     return (
         <header>
             <div className="bg-neutral-900 flex items-center justify-between py-3 px-5 md:bg-neutral-800
-                md:flex-col md:py-6">
+                md:flex-col md:py-6 lg:flex-row">
                 { logo }
                 <Hidden mdUp>
                     <IconButton 
@@ -51,7 +51,7 @@ const Header = () => {
                 </Hidden>
                 <Hidden mdDown>{ bitcoinStats }</Hidden>
                 <Hidden mdDown>
-                    <div className="flex mt-6">{ buttons }</div>
+                    <div className="flex mt-6 lg:mt-0 lg:ml-6">{ buttons }</div>
                 </Hidden>
             </div>
             <Hidden mdUp >

@@ -10,10 +10,10 @@ const BitcoinStats = () => {
     ];
 
     return (
-        <ul className="flex flex-wrap justify-between w-full md:mt-6">
+        <ul className="flex flex-wrap justify-between w-full md:mt-6 md:justify-center lg:mt-0 lg:ml-6 lg:w-auto lg:grow">
             {
                 list.map((item, index) => (
-                    <Typography component="li" className="flex flex-col items-center" key={index}>
+                    <Typography component="li" className="flex flex-col items-center md:mr-6 md:last:mr-0" key={index}>
                         <span className="font-bold text-sm text-slate-100">{ item.value }</span>
                         <span className="text-xs text-slate-200">{ item.description }</span>
                     </Typography>
