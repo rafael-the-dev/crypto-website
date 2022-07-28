@@ -32,9 +32,9 @@ const Navigation = ({ open }) => {
         item.list ? <SubList key={index} { ...item } /> : (
             <li 
                 key={index} 
-                className="mb-4 last:mb-0">
+                className="mb-4 last:mb-0 md:mb-0 md:mr-4 md:last:mr-0">
                 <Link 
-                    className="text-white uppercase"
+                    className="text-white uppercase md:text-sm"
                     href={item.href}>
                     { item.label }
                 </Link>
@@ -44,10 +44,12 @@ const Navigation = ({ open }) => {
 
     return (
         <>
-            <nav className={classNames(classes.transition, "relative", open ? "overflow-visible h-auto" : "h-0 overflow-hidden")}>
+            <nav className={classNames(classes.transition, "relative md:h-auto", 
+            open ? "overflow-visible h-auto" : "h-0 overflow-hidden")}>
                 <ul  
                     className={classNames("absolute bg-neutral-900 flex flex-col items-center w-full z-20",
-                    classes.transition, open ? "h-auto py-6": "h-0")}>
+                    classes.transition, open ? "h-auto py-6": "h-0",
+                    "md:relative md:flex-row md:py-6")}>
                     {
                         genetateList()
                     }

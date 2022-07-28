@@ -12,9 +12,9 @@ const SublistContainer = ({ label, list }) => {
     const toggleState = useCallback(() => setOpen(b => !b), []);
 
     return (
-        <li className="flex flex-col items-center mb-4 last:mb-0">
+        <li className="flex flex-col items-center mb-4 last:mb-0 md:mb-0 md:mr-4">
             <Button 
-                className="p-0 text-white"
+                className="font-normal p-0 text-white  md:text-sm"
                 endIcon={open ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
                 onClick={toggleState}>
                 { label }

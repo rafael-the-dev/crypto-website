@@ -2,3 +2,9 @@
 .button {
     width: 48.5%;
 }
+
+@media screen and (min-width: 768px) {
+    .cartIcon {
+        font-size: 1.2rem;
+    }
+}
