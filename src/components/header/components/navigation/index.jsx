@@ -6,7 +6,7 @@ import classes from "./styles.module.css";
 
 import SubList from "./components/sub-list";
 
-const Navigation = ({ open }) => {
+const Navigation = ({ closeHandler, open }) => {
     const list = [
         { label: "Home", href: "/" },
         { label: "About us", href: "about" },
@@ -32,9 +32,9 @@ const Navigation = ({ open }) => {
         item.list ? <SubList key={index} { ...item } /> : (
             <li 
                 key={index} 
-                className="mb-4 last:mb-0 md:mb-0 md:mr-4 md:last:mr-0">
+                className="mb-4 text-white hover:text-amber-600 last:mb-0 md:mb-0 md:mr-4 md:last:mr-0 lg:mr-6">
                 <Link 
-                    className="text-white uppercase md:text-sm"
+                    className="text-inherit uppercase md:text-sm"
                     href={item.href}>
                     { item.label }
                 </Link>
@@ -44,7 +44,7 @@ const Navigation = ({ open }) => {
 
     return (
         <>
-            <nav className={classNames(classes.transition, "relative md:h-auto", 
+            <nav className={classNames(classes.transition, "relative md:h-auto md:overflow-visible", 
             open ? "overflow-visible h-auto" : "h-0 overflow-hidden")}>
                 <ul  
                     className={classNames("absolute bg-neutral-900 flex flex-col items-center w-full z-20",
@@ -55,7 +55,7 @@ const Navigation = ({ open }) => {
                     }
                 </ul>
             </nav>
-            <div className={classNames( open ? "bg-black opacity-30 fixed h-screen w-screen z-10 md:hidden" : "hidden")}></div>
+            <div onClick={closeHandler} className={classNames( open ? "bg-black opacity-30 fixed h-screen w-screen z-10 md:hidden" : "hidden")}></div>
         </>
     );
 };

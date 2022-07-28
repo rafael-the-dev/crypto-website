@@ -19,21 +19,21 @@ const Header = () => {
     const [ open, setOpen ] = useState(false);
     const [ openSearch, setOpenSearch ] = useState(false);
 
+    const toggleOpen = useCallback(() => setOpen(b => !b), []);
+
     const logo = useMemo(() => <Image alt="logo" src={Logo} />, []);
     const buttons = useMemo(() => <Buttons />, []);
-    const navigation = useMemo(() => <Navigation open={open} />, [ open ]);
+    const navigation = useMemo(() => <Navigation closeHandler={toggleOpen} open={open} />, [ open, toggleOpen ]);
     const cartLink = useMemo(() => (
-        <Link className="flex items-center md:ml-4" href="/">
+        <Link className="flex items-center md:ml-4 lg:ml-6" href="/">
             <ShoppingCartIcon  className={classNames(classes.cartIcon, "md:text-white md:hover:text-amber-700")} />
         </Link>
     ), []);
     const searchButton = useMemo(() => (
-        <IconButton className="md:p-0 md:ml-4">
+        <IconButton className="md:p-0 md:ml-4 lg:ml-6">
             { openSearch ? <CloseIcon className="text-red-700 hover:text-red-500" /> : <SearchIcon className="text-white hover:text-amber-700" /> }
         </IconButton>
-    ), [ openSearch ])
-
-    const toggleOpen = useCallback(() => setOpen(b => !b), []);
+    ), [ openSearch ]);
 
     return (
         <header>
