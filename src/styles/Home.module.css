@@ -1,9 +1,14 @@
-.hero {
+.list {
     height: 250px;
+    transition: transform 1.4s ease-in;
 }
 
 .secureHero {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)), url(/slider/bg1.jpg);
+}
+
+.exchangeHero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)), url(/slider/bg2.jpg);
 }
 
 .heroButtons {
@@ -13,7 +18,7 @@
 }
 
 @media screen and (min-width: 600px) {
-    .hero {
+    .list {
         height: 350px;
     }
 
@@ -23,7 +28,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .hero {
+    .list {
         height: 420px;
     }
 
@@ -33,7 +38,7 @@
 }
 
 @media screen and (min-width: 990px) {
-    .hero {
+    .list {
         height: 534px;
     }
 }
