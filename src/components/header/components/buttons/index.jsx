@@ -6,12 +6,14 @@ import classes from "./styles.module.css"
 const ButtonsContainer = () => (
     <>
         <Button 
-            className={classNames(classes.button, `border-amber-600 py-2 text-amber-600 rounded-none hover:bg-amber-600 hover:text-white hover:border-amber-600`)}
+            className={classNames(classes.button, `border-amber-600 py-2 text-amber-600 rounded-none 
+            hover:bg-amber-600 hover:text-white hover:border-amber-600 sm:px-12`)}
             variant="outlined">
             Sign in
         </Button>
         <Button 
-            className={classNames(classes.button, `bg-amber-600 py-2 text-white rounded-none hover:bg-amber-700`)}
+            className={classNames(classes.button, `bg-amber-600 py-2 text-white rounded-none 
+            hover:bg-amber-700 sm:ml-6 sm:px-12`)}
             variant="contained">
             Register
         </Button>
