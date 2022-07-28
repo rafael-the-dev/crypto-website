@@ -1,7 +1,9 @@
-import { Button, Typography } from "@mui/material";
+import { Button, IconButton, Typography } from "@mui/material";
 import classNames from "classnames";
 
-import classes from "src/styles/home.module.css"
+import classes from "src/styles/home.module.css";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import { useCallback, useEffect, useRef } from "react"
 
@@ -9,6 +11,7 @@ import Link from "src/components/link";
 
 const Home = () => {
     const listRef = useRef(null);
+    const index = useRef(null);
 
     const setWidth = useCallback(() => {
         const children = [ ...listRef.current.children ];
@@ -31,7 +34,7 @@ const Home = () => {
             if(currentWindow) window.removeEventListener('resize', setWidth)
         };
     }, [ setWidth ]);
-    
+
     return (
         <main>
             <section className="overflow-hidden relative w-full">
@@ -73,6 +76,14 @@ const Home = () => {
                         </div>
                     </li>
                 </ul>
+                <div className={classNames(classes.heroButtons, 'absolute flex justify-between px-5 sm:px-4 w-full')}>
+                    <IconButton className="text-amber-500">
+                        <ArrowBackIosIcon className="text-4xl" />
+                    </IconButton>
+                    <IconButton className="text-amber-500">
+                        <ArrowForwardIosIcon  className="text-4xl" />
+                    </IconButton>
+                </div>
             </section>
         </main>
     );
