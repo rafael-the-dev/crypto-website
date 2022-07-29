@@ -43,7 +43,7 @@ const CarouselContainer = () => {
     }, [ setWidth ]);
 
     return (
-        <section className="overflow-hidden relative w-full">
+        <section className="hero-slider overflow-hidden relative w-full">
             <ul 
                 className={classNames(classes.list, "relative")}
                 ref={listRef}>

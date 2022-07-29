@@ -9,6 +9,6 @@
 }
 
 .hidden {
-    opacity: 0s;
+    opacity: 0;
     visibility: hidden;
 }
