@@ -13,6 +13,9 @@ const Home = () => {
     const children = useRef([]);
     const index = useRef(0);
 
+    const slide = useCallback(() => {
+        listRef.current.style.transform = `translateX(-${window.innerWidth * index.current}px)`;
+    }, []);
 
     const setWidth = useCallback(() => {
         const width = window.innerWidth;
@@ -23,12 +26,8 @@ const Home = () => {
         });
 
         listRef.current.style.width = `${width * children.current.length}px`;
-    }, []);
-
-    const slide = useCallback(() => {
-        console.log(index.current);
-        listRef.current.style.transform = `translateX(-${window.innerWidth * index.current}px)`;
-    }, []);
+        slide()
+    }, [ slide ]);
 
     const previousHandler = useCallback(() => {
         if((index.current - 1) >= 0) {
@@ -42,7 +41,7 @@ const Home = () => {
         if((index.current + 1) < children.current.length) {
             index.current = index.current + 1;
         } 
-        
+
         slide();
     }, [ slide ]);
 
