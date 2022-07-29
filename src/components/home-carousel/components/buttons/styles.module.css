@@ -1,0 +1,14 @@
+.heroButtons {
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.button {
+    transition: all 1s ease-in;
+}
+
+.hidden {
+    opacity: 0s;
+    visibility: hidden;
+}

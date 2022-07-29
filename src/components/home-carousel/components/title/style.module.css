@@ -1,0 +1,11 @@
+@media screen and (min-width: 600px) {
+    .heroTitle {
+        line-height: 3.4rem !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .heroTitle {
+        line-height: 4.5rem !important;
+    }
+}
