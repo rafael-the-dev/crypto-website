@@ -55,8 +55,10 @@ const Header = () => {
         }
 
         if(window.innerWidth >= 768) {
-            if(!hasClass({ element: firstRowRef.current, classname: "hidden" }))
+            if(!hasClass({ element: firstRowRef.current, classname: "hidden" })) {
                 firstRowRef.current.classList.add("hidden");
+                firstRowRef.current.classList.add("md:flex");
+            }
 
             if(hasClass({ element: secondRowRef.current, classname: "hidden" }))
                 secondRowRef.current.classList.remove("hidden");
@@ -64,13 +66,35 @@ const Header = () => {
             if(hasClass({ element: firstRowRef.current, classname: "hidden" }))
                 firstRowRef.current.classList.remove("hidden");
 
-            if(!hasClass({ element: secondRowRef.current, classname: "hidden" }))
+            if(!hasClass({ element: secondRowRef.current, classname: "hidden" })) {
                 secondRowRef.current.classList.add("hidden");
+                secondRowRef.current.classList.add("md:flex");
+            }
         }
-    }, [])
+    }, []);
+
+    const resizeHandler = useCallback(() => {
+        if(window.scrollY <= 80) {
+            if(hasClass({ element: secondRowRef.current, classname: "hidden" }))
+                secondRowRef.current.classList.remove("hidden");
+
+            if(hasClass({ element: firstRowRef.current, classname: "hidden" }))
+                firstRowRef.current.classList.remove("hidden");
+        }
+    }, []);
 
     useEffect(() => {
         window.addEventListener("scroll", scrollHandler);
+        window.addEventListener("resize", resizeHandler);
+
+        const currentWindow = window;
+
+        return () => {
+            if(currentWindow) {
+                currentWindow.removeEventListener("scroll", scrollHandler);
+                currentWindow.removeEventListener("resize", resizeHandler);
+            }
+        };
     }, [ scrollHandler ]);
 
     return (
