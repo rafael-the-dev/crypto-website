@@ -32,7 +32,7 @@ const ContentContainer = () => {
 
     return (
         <div className="mt-6">
-            <div className="flex flex-col items-stretch">
+            <div className="flex flex-col items-stretch sm:flex-row">
                 <Button 
                     id={ids.current.mission}
                     onClick={clickHandler(ids.current.mission)}
