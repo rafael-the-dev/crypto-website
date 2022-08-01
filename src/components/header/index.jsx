@@ -83,7 +83,7 @@ const Header = () => {
         }
     }, []);
 
-    useEffect(() => {
+    /*useEffect(() => {
         window.addEventListener("scroll", scrollHandler);
         window.addEventListener("resize", resizeHandler);
 
@@ -95,7 +95,7 @@ const Header = () => {
                 currentWindow.removeEventListener("resize", resizeHandler);
             }
         };
-    }, [ scrollHandler ]);
+    }, [ scrollHandler ]);*/
 
     return (
         <header 
