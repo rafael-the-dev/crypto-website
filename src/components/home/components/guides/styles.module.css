@@ -1,5 +1,5 @@
 .row {
-    
+    transform: translateY(-50px);
 }
 
 .download::before {

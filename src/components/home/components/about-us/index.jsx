@@ -11,7 +11,7 @@ import Content from "./components/content"
 const AboutUsContainer = () => {
 
     return (
-        <section className={classNames(classes.root, "bg-neutral-900 flex flex-col items-center px-5 py-14")}>
+        <section className={classNames(classes.root, "bg-neutral-900 flex flex-col items-center px-5 pt-10 pb-14")}>
             <Typography
                 className={classNames(`font-bold text-white text-3xl uppercase`)}
                 component="h2">
