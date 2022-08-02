@@ -3,6 +3,7 @@ import classNames from "classnames";
 import Image from "next/image"
 
 import aboutImage from "public/about-us.png"
+import classes from "./styles.module.css";
 
 import Link from "src/components/link";
 import Content from "./components/content"
@@ -10,7 +11,7 @@ import Content from "./components/content"
 const AboutUsContainer = () => {
 
     return (
-        <section className="bg-neutral-900 flex flex-col items-center px-5 py-14">
+        <section className={classNames(classes.root, "bg-neutral-900 flex flex-col items-center px-5 py-14")}>
             <Typography
                 className={classNames(`font-bold text-white text-3xl uppercase`)}
                 component="h2">
@@ -20,14 +21,14 @@ const AboutUsContainer = () => {
                 className={classNames(`leading-8 mt-4 opacity-70 text-center text-white uppercase`)}>
                 A commercial website that lists wallets, exchanges and others bitcoin related info.
             </Typography>
-            <div className="mt-10">
-                <div>
+            <div className={classNames(classes.row, "items-stretch justify-center mt-10")}>
+                <div className={classNames(classes.imageContainer, "flex items-center justify-center")}>
                     <Image 
                         alt=""
                         src={aboutImage}
                     />
                 </div>
-                <div className="mt-20">
+                <div className={classNames(classes.content, "mt-20")}>
                     <Typography
                         className={classNames(`font-bold text-white text-2xl uppercase`)}
                         component="h3">
