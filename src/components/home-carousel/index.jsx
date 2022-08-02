@@ -13,6 +13,7 @@ const CarouselContainer = () => {
     const listRef = useRef(null);
     const children = useRef([]);
     const indexRef = useRef(0);
+    const setChildrenLengthRef = useRef(null);
 
     const slide = useCallback(() => {
         listRef.current.style.transform = `translateX(-${window.innerWidth * indexRef.current}px)`;
@@ -32,6 +33,7 @@ const CarouselContainer = () => {
 
     useEffect(() => {
         children.current = [ ...listRef.current.children ];
+        setChildrenLengthRef.current?.(children.current.length);
         setWidth();
         window.addEventListener("resize", setWidth);
 
@@ -68,7 +70,7 @@ const CarouselContainer = () => {
                     </div>
                 </li>
             </ul>
-            <Controls childrenList={children} indexRef={indexRef} slideHandler={slide} />
+            <Controls setChildrenLengthRef={setChildrenLengthRef} indexRef={indexRef} slideHandler={slide} />
         </section>
     );
 };

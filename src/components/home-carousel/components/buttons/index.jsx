@@ -6,13 +6,10 @@ import classes from "./styles.module.css";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-const ButtonsContainer = ({ childrenList, indexRef, slideHandler }) => {
+const ButtonsContainer = ({ setChildrenLengthRef, indexRef, slideHandler }) => {
     const [ index, setIndex ] = useState(0);
-
-    const slide = useCallback(() => {
-        listRef.current.style.transform = `translateX(-${window.innerWidth * index}px)`;
-    }, []);
-
+    const [ childrenLength, setChildrenLength ] = useState(0);
+    
     const previousHandler = useCallback(() => {
         setIndex(currentIndex => {
             if((currentIndex - 1) >= 0) {
@@ -25,13 +22,17 @@ const ButtonsContainer = ({ childrenList, indexRef, slideHandler }) => {
 
     const nextHandler = useCallback(() => {
         setIndex(currentIndex => {
-            if((currentIndex + 1) < childrenList.current.length) {
+            if((currentIndex + 1) < childrenLength) {
                 return currentIndex + 1;
             }
 
             return currentIndex;
         })
-    }, [  ]);
+    }, [ childrenLength ]);
+
+    useEffect(() => {
+        setChildrenLengthRef.current = value => setChildrenLength(value);
+    }, [ setChildrenLengthRef ]);
 
     useEffect(() => {
         indexRef.current = index;
@@ -47,8 +48,8 @@ const ButtonsContainer = ({ childrenList, indexRef, slideHandler }) => {
                 <ArrowBackIosIcon className="text-4xl" />
             </IconButton>
             <IconButton 
-                className={classNames(classes.button, "text-amber-500", { [classes.hidden]: index + 1 >= childrenList.current.length})}
-                disabled={index + 1 >= childrenList.current.length}
+                className={classNames(classes.button, "text-amber-500", { [classes.hidden]: index + 1 >= childrenLength})}
+                disabled={index + 1 >= childrenLength}
                 onClick={nextHandler}>
                 <ArrowForwardIosIcon  className="text-4xl" />
             </IconButton>
