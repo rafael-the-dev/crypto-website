@@ -22,12 +22,20 @@
 }
 
 @media screen and (min-width: 768px) {
-    .container, .row {
+    .container {
         padding-left: 5%;
         padding-right: 5%;
     }
 
     .row {
         transform: translateY(-80px);
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .row {
+        display: flex;
+        padding-left: 3%;
+        padding-right: 5%;
     }
 }

@@ -7,6 +7,13 @@
 
 @media screen and (min-width: 768px) {
     .title::before {
+        left: -80px;
         top: 0
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .container {
+        width: 32.333%;
     }
 }
