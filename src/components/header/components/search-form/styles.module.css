@@ -1,3 +1,11 @@
 .form {
     background-color: rgba(0, 0, 0, .8);
+    left: 50%;
+    transition: all 1s ease-in;
+    transform: scale(0) translateX(-50%);
+}
+
+.formShow {
+    left: -50%;
+    transform: scale(1) translateX(50%);
 }

@@ -18,22 +18,19 @@ const SearchFormContainer = ({ toggleRef }) => {
     return (
         <div
             className="relative w-full z-10">
-            <Collapse 
-                in={open}
-                unmountOnExit>
-                <form 
-                    className={classNames(classes.form, "absolute flex items-center py-4 px-6 w-full")}>
-                    <input 
-                        className="bg-transparent border-0 grow opacity-80 outline-none py-1 text-white text-center text-base"
-                        placeholder="type your keyword and press enter"
-                    />
-                    <IconButton 
-                        className="ml-3 opacity-70 text-white"
-                        onClick={toggleOpen}>
-                        <CloseIcon />
-                    </IconButton>
-                </form>
-            </Collapse>
+            <form 
+                className={classNames(classes.form, "absolute flex items-center py-4 px-6 w-full",
+                { [classes.formShow]: open })}>
+                <input 
+                    className="bg-transparent border-0 grow opacity-80 outline-none py-1 text-white text-center text-base"
+                    placeholder="type your keyword and press enter"
+                />
+                <IconButton 
+                    className="ml-3 opacity-70 text-white"
+                    onClick={toggleOpen}>
+                    <CloseIcon />
+                </IconButton>
+            </form>
         </div>
     );
 };
