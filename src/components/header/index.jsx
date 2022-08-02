@@ -15,6 +15,7 @@ import Link from "src/components/link";
 import Buttons from "./components/buttons";
 import Navigation from "./components/navigation";
 import BitcoinStats from "./components/bitcoin-stats";
+import SearchForm from "./components/search-form";
 
 const Header = () => {
     const [ open, setOpen ] = useState(false);
@@ -23,8 +24,10 @@ const Header = () => {
     const headerRef = useRef(null);
     const firstRowRef = useRef(null);
     const secondRowRef = useRef(null);
+    const toggleSearchRef = useRef(null);
 
     const toggleOpen = useCallback(() => setOpen(b => !b), []);
+    const toggleSearch = useCallback(() => toggleSearchRef.current?.(), []);
 
     const logo = useMemo(() => <Image alt="logo" src={Logo} />, []);
     const buttons = useMemo(() => <Buttons />, []);
@@ -38,10 +41,14 @@ const Header = () => {
     ), []);
 
     const searchButton = useMemo(() => (
-        <IconButton className="md:p-0 md:ml-4 lg:ml-6">
+        <IconButton 
+            className="md:p-0 md:ml-4 lg:ml-6"
+            onClick={toggleSearch}>
             { openSearch ? <CloseIcon className="text-red-700 hover:text-red-500" /> : <SearchIcon className="text-white hover:text-amber-700" /> }
         </IconButton>
     ), [ openSearch ]);
+
+    const searchForm = useMemo(() => <Hidden mdDown><SearchForm toggleRef={toggleSearchRef} /></Hidden>, [])
     
     const hasClass = useCallback(({ element, classname }) => element.classList.contains(classname), []);
 
@@ -129,6 +136,7 @@ const Header = () => {
                 <Hidden smDown mdUp>{ bitcoinStats }</Hidden>
                 <Hidden mdUp><div className="flex justify-between w-full sm:mt-4 sm:w-auto">{ buttons }</div></Hidden>
             </div>
+            { searchForm }
         </header>
     );
 };
