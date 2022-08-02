@@ -49,7 +49,7 @@ const CarouselContainer = () => {
                 ref={listRef}>
                 <li className="absolute h-full">
                     <div className={classNames(classes.hero, classes.secureHero, `bg-no-repeat bg-center bg-cover flex flex-col 
-                        h-full items-center justify-center pb-8`)}>
+                        h-full items-center justify-center pb-8 md:pb-12`)}>
                         <Title>
                             <span className="text-amber-600">Secure</span> and <span className="text-amber-600">Easy way </span>
                             <br/>to bitcoin
@@ -59,7 +59,7 @@ const CarouselContainer = () => {
                 </li>
                 <li className="absolute h-full">
                     <div className={classNames(classes.hero, classes.exchangeHero, `bg-no-repeat bg-center bg-cover flex flex-col 
-                        h-full items-center justify-center pb-8`)}>
+                        h-full items-center justify-center pb-8 md:pb-12`)}>
                         <Title>
                             <span className="text-amber-600">Bitcoin</span> exchange<br/>you can
                             <span className="text-amber-600">trust</span>

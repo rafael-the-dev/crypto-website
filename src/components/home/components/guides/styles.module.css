@@ -13,3 +13,21 @@
 .buySell::before {
     background-image: url(/icons/orange/buy-sell-bitcoins.png);
 }
+
+@media screen and (min-width: 600px) {
+    .container, .row {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container, .row {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .row {
+        transform: translateY(-80px);
+    }
+}
