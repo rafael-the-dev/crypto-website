@@ -1,3 +1,15 @@
 .row {
     
 }
+
+.download::before {
+    background-image: url(/icons/orange/download-bitcoin.png);
+}
+
+.add::before {
+    background-image: url(/icons/orange/add-bitcoins.png);
+}
+
+.buySell::before {
+    background-image: url(/icons/orange/buy-sell-bitcoins.png);
+}
