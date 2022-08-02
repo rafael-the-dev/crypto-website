@@ -9,11 +9,13 @@ import aboutImage from "public/about-us.png"
 import Link from "src/components/link";
 import Hero from "src/components/home-carousel"
 import AbousUs from "src/components/home/components/about-us";
+import Guides from "src/components/home/components/guides";
 
 const Home = () => {
     return (
         <main>
             <Hero />
+            <Guides />
             <AbousUs />
         </main>
     );

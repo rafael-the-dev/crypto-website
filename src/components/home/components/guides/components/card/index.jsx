@@ -1,15 +1,18 @@
 import { Typography } from "@mui/material";
 import classNames from "classnames";
 
-const CardContainer = ({ description, title }) => (
-    <div className="text-center">
+import classes from "./styles.module.css"
+
+const CardContainer = ({ description, title, titleIcon }) => (
+    <div className="mb-6 text-center">
         <Typography
             component="h2"
-            className={classNames("font-bold")}>
+            className={classNames("font-bold text-xl text-white before:block before:mx-auto before:bg-no-repeat", 
+            "before:bg-contain", classes.title, titleIcon)}>
             { title }
         </Typography>
         <Typography
-            className="font-bold">
+            className="mt-3 opacity-70  text-white">
             { description }
         </Typography>
     </div>
