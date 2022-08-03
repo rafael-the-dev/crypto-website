@@ -35,3 +35,25 @@
         height: 241px;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .cardsContainer {
+        width: calc(100% - 400px);
+    }
+
+    .imageContainer {
+        height: auto;
+        width: 400px
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .cardsContainer {
+        width: calc(100% - 450px);
+    }
+
+    .imageContainer {
+        height: auto;
+        width: 450px
+    }
+}

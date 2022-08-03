@@ -44,13 +44,14 @@ const AppAdvantagesContainer = () => {
 
 
     return (
-        <section>
-            <ul className="bg-neutral-800 flex-wrap justify-between py-12 px-5 sm:px-[10%] md:px-5 md:flex">
+        <section className="lg:flex items-stretch">
+            <ul className={classNames(classes.cardsContainer, 
+                "bg-neutral-800 flex-wrap grow justify-between py-12 px-5 sm:px-[10%] md:px-5 md:flex lg:pb-0")}>
                 {
                     list.map((item, index) => <Card key={index} { ...item } />)
                 }
             </ul>
-            <div className={classNames(classes.imageContainer, `relative mb-12`)}>
+            <div className={classNames(classes.imageContainer, `relative mb-12 lg:mb-0`)}>
                 <Image 
                     alt=""
                     className="object-cover object-center"
