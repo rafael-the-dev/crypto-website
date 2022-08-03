@@ -1,0 +1,23 @@
+.strongSecurity::before {
+    background-image: url(/icons/orange/strong-security.png);
+}
+
+.worldCoverage::before {
+    background-image: url(/icons/orange/world-coverage.png);
+}
+
+.paymentOptions::before {
+    background-image: url(/icons/orange/payment-options.png);
+}
+
+.mobileApp::before {
+    background-image: url(/icons/orange/mobile-app.png);
+}
+
+.costEfficiency::before {
+    background-image: url(/icons/orange/cost-efficiency.png);
+}
+
+.highLiquidity::before {
+    background-image: url(/icons/orange/high-liquidity.png);
+}

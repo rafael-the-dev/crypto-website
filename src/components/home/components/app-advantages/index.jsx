@@ -1,37 +1,39 @@
 
-import Card from "./components/card"
+import Card from "./components/card";
+
+import classes from "./styles.module.css";
 
 const AppAdvantagesContainer = () => {
     const list = [
         {
             description: "Protection agains DDoS attacks, full data encryption",
             title: "Strong security",
-            titleIcon: ""
+            titleIcon: classes.strongSecurity
         },
         {
             description: "Providing services in 99% countries around all the globe",
             title: "World coverage",
-            titleIcon: ""
+            titleIcon: classes.worldCoverage
         },
         {
             description: "Popular methods: Visa, Master Card, bank transfer, cryptocurrency",
             title: "Payment options",
-            titleIcon: ""
+            titleIcon: classes.paymentOptions
         },
         {
             description: "Trading via our Mobile App, Available in Play Store & App Store",
             title: "Mobile app",
-            titleIcon: ""
+            titleIcon: classes.mobileApp
         },
         {
             description: "Reasonable trading fees for takers and all market makers",
             title: "Cost efficiency",
-            titleIcon: ""
+            titleIcon: classes.costEfficiency
         },
         {
             description: "Fast access to high liquidity orderbook for top currency pairs",
             title: "High liquidity",
-            titleIcon: ""
+            titleIcon: classes.highLiquidity
         }
     ];
 
