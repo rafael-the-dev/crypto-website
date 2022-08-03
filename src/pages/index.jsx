@@ -10,6 +10,7 @@ import Link from "src/components/link";
 import Hero from "src/components/home-carousel"
 import AbousUs from "src/components/home/components/about-us";
 import Guides from "src/components/home/components/guides";
+import AppAdvantages from "src/components/home/components/app-advantages";
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Hero />
             <Guides />
             <AbousUs />
+            <AppAdvantages />
         </main>
     );
 };

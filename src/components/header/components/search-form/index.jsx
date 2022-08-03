@@ -14,7 +14,7 @@ const SearchFormContainer = ({ toggleRef }) => {
     useEffect(() => {
         toggleRef.current = toggleOpen;
     }, [ toggleOpen, toggleRef]);
-    console.log(open)
+    
     return (
         <div
             className="relative w-full z-10">

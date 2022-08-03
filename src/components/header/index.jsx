@@ -93,9 +93,7 @@ const Header = () => {
     /*useEffect(() => {
         window.addEventListener("scroll", scrollHandler);
         window.addEventListener("resize", resizeHandler);
-
         const currentWindow = window;
-
         return () => {
             if(currentWindow) {
                 currentWindow.removeEventListener("scroll", scrollHandler);
