@@ -21,3 +21,13 @@
 .highLiquidity::before {
     background-image: url(/icons/orange/high-liquidity.png);
 }
+
+.imageContainer {
+    height: 332px;
+}
+
+@media screen and (min-width: 600px) {
+    .imageContainer {
+        height: 241px;
+    }
+}

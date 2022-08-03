@@ -1,7 +1,10 @@
+import Image from "next/image";
+import classNames from "classnames";
 
 import Card from "./components/card";
 
 import classes from "./styles.module.css";
+import videoBg from "public/backgrounds/bg-video.jpg"
 
 const AppAdvantagesContainer = () => {
     const list = [
@@ -45,6 +48,14 @@ const AppAdvantagesContainer = () => {
                     list.map((item, index) => <Card key={index} { ...item } />)
                 }
             </ul>
+            <div className={classNames(classes.imageContainer, `relative mb-12`)}>
+                <Image 
+                    alt=""
+                    className="object-cover object-center"
+                    layout="fill"
+                    src="/backgrounds/bg-video.jpg"
+                />
+            </div>
         </section>
     );
 };
