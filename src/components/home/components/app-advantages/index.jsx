@@ -1,10 +1,12 @@
 import Image from "next/image";
+import { IconButton } from "@mui/material"
 import classNames from "classnames";
+
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 import Card from "./components/card";
 
 import classes from "./styles.module.css";
-import videoBg from "public/backgrounds/bg-video.jpg"
 
 const AppAdvantagesContainer = () => {
     const list = [
@@ -55,6 +57,12 @@ const AppAdvantagesContainer = () => {
                     layout="fill"
                     src="/backgrounds/bg-video.jpg"
                 />
+                <div className={classNames(classes.buttonContainer, "absolute flex items-center justify-center",
+                    "h-full left-0 top-0 w-full z-10")}>
+                    <IconButton className="border-4 border-solid border-white p-4 text-xl text-amber-600">
+                        <PlayArrowIcon />
+                    </IconButton>
+                </div>
             </div>
         </section>
     );
