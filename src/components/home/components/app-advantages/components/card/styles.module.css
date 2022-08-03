@@ -5,8 +5,8 @@
     width: 43px;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 768px) {
     .container {
-        width: 32.333%;
+        width: 49%;
     }
 }
