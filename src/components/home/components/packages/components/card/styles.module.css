@@ -1,0 +1,11 @@
+.card {
+    height: 236px;
+}
+
+.rotate {
+    transform: rotateY(180deg);
+}
+
+.backCard {
+    transform: rotateY(180deg);
+}

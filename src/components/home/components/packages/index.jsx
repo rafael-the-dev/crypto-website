@@ -2,11 +2,56 @@ import { Button, Typography } from "@mui/material";
 import { useCallback, useMemo, useRef, useState } from "react";
 import classNames from "classnames";
 
-import classes from "./styles.module.css"
+import classes from "./styles.module.css";
+
+import Card from "./components/card";
 
 const PackagesSection = () => {
     const packagesTypes = useRef({ buy: "BUY", sell: "SELL" })
     const [ selectedPackage, setSelectedPackage ] = useState(packagesTypes.current.buy);
+
+    const cardsContent = useRef([
+        {
+            buy: {
+                price: 100,
+                title: "Get 0.007 btc"
+            },
+            sell: {
+                price: 100,
+                title: "Get 0.007 btc"
+            }
+        },
+        {
+            buy: {
+                price: 100,
+                title: "Get 0.007 btc"
+            },
+            sell: {
+                price: 100,
+                title: "Get 0.007 btc"
+            }
+        },
+        {
+            buy: {
+                price: 100,
+                title: "Get 0.007 btc"
+            },
+            sell: {
+                price: 100,
+                title: "Get 0.007 btc"
+            }
+        },
+        {
+            buy: {
+                price: 100,
+                title: "Get 0.007 btc"
+            },
+            sell: {
+                price: 100,
+                title: "Get 0.007 btc"
+            }
+        }
+    ])
 
     const clickHandler = useCallback(prop => () => setSelectedPackage(prop), []);
 
@@ -52,6 +97,11 @@ const PackagesSection = () => {
                 selectedPackage === packagesTypes.current.buy ? classes.buttonsContainerLeft : classes.buttonsContainerRight)}>
                 { buttons }
             </div>
+            <ul className="mt-8 w-full">
+                {
+                    cardsContent.current.map((item, index) => <Card key={index} { ...item} />)
+                }
+            </ul>
         </section>
     );
 };
