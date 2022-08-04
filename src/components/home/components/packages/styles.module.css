@@ -1,4 +1,28 @@
+.buttonsContainer::before, .toggleButton {
+    padding-bottom: .6rem;
+    padding-top: .6rem;
+    width: 80px;
+}
 
+.buttonsContainer::before {
+    content: "" !important;
+    height: 100%;
+    top: 0;
+    transition: all 1s ease-in;
+    width: 80px;
+}
+
+.buttonsContainerLeft::before {
+    left: 0;
+}
+
+.buttonsContainerRight::before {
+    transform: translateX(100%);
+}
+
+.toggleButton {
+    color: #FFF;
+}
 
 @media screen and (min-width: 800px) {
     .description::before, .description::after {
