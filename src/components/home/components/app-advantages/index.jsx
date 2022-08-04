@@ -51,7 +51,7 @@ const AppAdvantagesContainer = () => {
                     list.map((item, index) => <Card key={index} { ...item } />)
                 }
             </ul>
-            <div className={classNames(classes.imageContainer, `relative mb-12 lg:mb-0`)}>
+            <div className={classNames(classes.imageContainer, `relative`)}>
                 <Image 
                     alt=""
                     className="object-cover object-center"

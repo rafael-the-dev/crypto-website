@@ -1,0 +1,28 @@
+
+
+@media screen and (min-width: 800px) {
+    .description::before, .description::after {
+        content: "" !important;
+        display: inline-block;
+        height: 3px;
+        width: 40px;
+    }
+
+    .description::before {
+        margin-right: 10px;
+    }
+
+    .description::after {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .description::before {
+        margin-right: 20px;
+    }
+
+    .description::after {
+        margin-left: 20px;
+    }
+}
