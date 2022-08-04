@@ -14,13 +14,13 @@ const Title = ({ children }) => (
 const Price = ({ children }) => (
     <Typography
         component="h4"
-        className="font-bold mt-8 text-white text-4xl sm:text-5xl">
+        className="font-bold mt-8 text-white text-4xl sm:text-5xl lg:mt-10">
         { children }
     </Typography>
 );
 
 const OrderButton = () => (
-    <Button className="bg-amber-600 mt-6 py-2 text-white w-full hover:bg-amber-700">
+    <Button className="bg-amber-600 mt-6 py-2 text-white w-full hover:bg-amber-700 lg:mt-12">
         Order now
     </Button>
 );

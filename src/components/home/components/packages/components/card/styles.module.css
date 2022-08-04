@@ -9,3 +9,17 @@
 .backCard {
     transform: rotateY(180deg);
 }
+
+@media screen and (min-width: 600px) {
+    .card {
+        height: 264px;
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        height: 284px;
+        width: 23.5%;
+    }
+}

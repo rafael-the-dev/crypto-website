@@ -92,12 +92,12 @@ const PackagesSection = () => {
             { description }
 
             <div className={classNames(classes.buttonsContainer, 
-                "border border-solid border-gray-400 flex items-stretch mt-8 relative",
+                "border border-solid border-gray-400 flex items-stretch mt-12 relative",
                 "before:absolute before:bg-amber-600",
                 selectedPackage === packagesTypes.current.buy ? classes.buttonsContainerLeft : classes.buttonsContainerRight)}>
                 { buttons }
             </div>
-            <ul className="mt-8 w-full">
+            <ul className="flex-wrap justify-between mt-16 w-full sm:flex">
                 {
                     cardsContent.current.map((item, index) => <Card key={index} { ...item} />)
                 }
