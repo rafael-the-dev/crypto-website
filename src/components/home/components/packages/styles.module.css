@@ -24,6 +24,12 @@
     color: #FFF;
 }
 
+@media screen and (min-width: 600px) {
+    .buttonsContainer::before, .toggleButton {
+        width: 100px;
+    }
+}
+
 @media screen and (min-width: 800px) {
     .description::before, .description::after {
         content: "" !important;
