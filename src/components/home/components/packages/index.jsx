@@ -99,7 +99,13 @@ const PackagesSection = () => {
             </div>
             <ul className="flex-wrap justify-between mt-16 w-full sm:flex">
                 {
-                    cardsContent.current.map((item, index) => <Card key={index} { ...item} />)
+                    cardsContent.current.map((item, index) => (
+                        <Card 
+                            key={index} 
+                            isSell={selectedPackage === packagesTypes.current.sell} 
+                            { ...item} 
+                        />
+                    ))
                 }
             </ul>
         </section>

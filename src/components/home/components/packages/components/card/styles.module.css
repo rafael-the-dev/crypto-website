@@ -1,5 +1,11 @@
 .card {
     height: 236px;
+    perspective: 1000px;
+}
+
+.subContainer {
+    transition: transform 1s;
+    transform-style: preserve-3d;
 }
 
 .rotate {

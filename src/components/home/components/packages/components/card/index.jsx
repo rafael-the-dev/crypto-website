@@ -27,14 +27,22 @@ const OrderButton = () => (
 
 const Card = ({ buy, sell, isSell }) => {
     return (
-        <li className={classNames(classes.card, "bg-neutral-800 mb-4")}>
+        <li className={classNames(classes.card, "mb-4")}>
             <div 
-                className={classNames("h-full relative w-full",
+                className={classNames("h-full relative w-full", classes.subContainer, 
                 { [classes.rotate]: isSell })}>
-                <div className="absolute flex h-full flex-col items-center justify-center px-5 text-center w-full">
+                <div className={classNames({ "z-10": !isSell },
+                    "absolute bg-neutral-800 flex h-full flex-col items-center justify-center px-5 text-center w-full")}>
                     <Title>{ buy.title }</Title>
                     <Typography className="mt-3 opacity-80 text-white uppercase">for</Typography>
                     <Price>${ buy.price }</Price>
+                    <OrderButton/>
+                </div>
+                <div className={classNames(classes.backCard, { "z-10": isSell },
+                    "absolute bg-neutral-800 flex h-full flex-col items-center justify-center px-5 text-center w-full")}>
+                    <Title>{ sell.title }</Title>
+                    <Typography className="mt-3 opacity-80 text-white uppercase">for</Typography>
+                    <Price>₿{ sell.price }</Price>
                     <OrderButton/>
                 </div>
             </div>
