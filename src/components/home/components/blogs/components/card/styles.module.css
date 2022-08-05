@@ -1,0 +1,11 @@
+.imageContainer > span {
+    height: 270px !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+    .root {
+        width: 48%;
+    }
+}

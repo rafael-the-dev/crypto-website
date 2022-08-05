@@ -12,6 +12,7 @@ import AbousUs from "src/components/home/components/about-us";
 import Guides from "src/components/home/components/guides";
 import AppAdvantages from "src/components/home/components/app-advantages";
 import Packages from "src/components/home/components/packages";
+import Blogs from "src/components/home/components/blogs";
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
             <AbousUs />
             <AppAdvantages />
             <Packages />
+            <Blogs />
         </main>
     );
 };
