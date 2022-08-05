@@ -5,7 +5,8 @@ import classNames from "classnames";
 import classes from "./styles.module.css";
 
 import Card from "./components/card";
-import Description from "src/components/description"
+import Description from "src/components/description";
+import Title from "src/components/title";
 
 const PackagesSection = () => {
     const packagesTypes = useRef({ buy: "BUY", sell: "SELL" })
@@ -57,11 +58,9 @@ const PackagesSection = () => {
     const clickHandler = useCallback(prop => () => setSelectedPackage(prop), []);
 
     const title = useMemo(() => (
-        <Typography
-            className={classNames(`font-bold text-white text-3xl uppercase md:text-4xl`)}
-            component="h2">
+        <Title>
             Affordable<br className="sm:hidden" /><span className="text-amber-600 sm:ml-3">packages</span>
-        </Typography>
+        </Title>
     ), [])
 
     const description = useMemo(() => (
