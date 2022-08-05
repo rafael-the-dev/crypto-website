@@ -5,6 +5,7 @@ import classNames from "classnames";
 import classes from "./styles.module.css";
 
 import Card from "./components/card";
+import Description from "src/components/description"
 
 const PackagesSection = () => {
     const packagesTypes = useRef({ buy: "BUY", sell: "SELL" })
@@ -17,38 +18,38 @@ const PackagesSection = () => {
                 title: "Get 0.007 btc"
             },
             sell: {
-                price: 100,
-                title: "Get 0.007 btc"
+                price: 0.2,
+                title: "Get 100 usd"
             }
         },
         {
             buy: {
-                price: 100,
-                title: "Get 0.007 btc"
+                price: 300,
+                title: "Get 0.015 btc"
             },
             sell: {
-                price: 100,
-                title: "Get 0.007 btc"
+                price: 0.5,
+                title: "Get 1000 usd"
             }
         },
         {
             buy: {
-                price: 100,
-                title: "Get 0.007 btc"
+                price: 500,
+                title: "Get 0.031 btc"
             },
             sell: {
-                price: 100,
-                title: "Get 0.007 btc"
+                price: 1,
+                title: "Get 3000 usd"
             }
         },
         {
             buy: {
-                price: 100,
-                title: "Get 0.007 btc"
+                price: 1000,
+                title: "Get  0.081 btc"
             },
             sell: {
-                price: 100,
-                title: "Get 0.007 btc"
+                price: 2,
+                title: "Get 9000 usd"
             }
         }
     ])
@@ -64,11 +65,9 @@ const PackagesSection = () => {
     ), [])
 
     const description = useMemo(() => (
-        <Typography
-            className={classNames(classes.description, `leading-8 mt-4 opacity-70 text-center text-white 
-            uppercase before:bg-amber-600 after:bg-amber-600 md:flex md:items-center`)}>
+        <Description hasBars>
             Purchase Bitcoin using credit card or with your linked bank account.
-        </Typography>
+        </Description>
     ), []);
 
     const buttons = useMemo(() => (
@@ -92,7 +91,7 @@ const PackagesSection = () => {
             { description }
 
             <div className={classNames(classes.buttonsContainer, 
-                "border border-solid border-gray-400 flex items-stretch mt-12 relative",
+                "border border-solid border-gray-500 flex items-stretch mt-12 relative",
                 "before:absolute before:bg-amber-600",
                 selectedPackage === packagesTypes.current.buy ? classes.buttonsContainerLeft : classes.buttonsContainerRight)}>
                 { buttons }
