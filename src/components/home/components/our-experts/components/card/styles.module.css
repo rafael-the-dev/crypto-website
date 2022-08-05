@@ -1,0 +1,5 @@
+.card > span {
+    height: 350px !important;
+    position: relative !important;
+    width: 100% !important;
+}

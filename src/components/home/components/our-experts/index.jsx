@@ -12,6 +12,28 @@ const OurExpertsContainer = () => (
         <Description hasBars>
             A talented team of cryptocurrency based in london
         </Description>
+        <ul className="w-full">
+            <Card
+                image="/team/member1.jpg" 
+                name="Lina Marzouki"
+                position="Ceo founder"
+            />
+            <Card
+                image="/team/member2.jpg" 
+                name="Marco Verrati"
+                position="Director"
+            />
+            <Card
+                image="/team/member3.jpg" 
+                name="Emilia Bella"
+                position="Bitcoin consultant"
+            />
+            <Card
+                image="/team/member4.jpg" 
+                name="Antonio Conte"
+                position="Bitcoin developer"
+            />
+        </ul>
     </section>
 );
 
