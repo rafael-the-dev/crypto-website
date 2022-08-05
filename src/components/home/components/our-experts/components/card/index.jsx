@@ -15,7 +15,7 @@ const Card = ({ image, name, position }) => (
         <div className={classNames("info py-6 relative text-center text-white before:bg-amber-600")}>
             <Typography
                 component="h2"
-                className="font-bold uppercase">
+                className="font-bold relative uppercase">
                 { name }
             </Typography> 
             <Typography
@@ -33,7 +33,12 @@ const Card = ({ image, name, position }) => (
                         left: 0;
                         position: absolute;
                         top: 0;
+                        transition: height .6s ease-in;
                         width: 100%;
+                    }
+
+                    .card:hover .info::before {
+                        height: 100%;
                     }
                 `
             }
