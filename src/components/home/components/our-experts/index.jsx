@@ -12,7 +12,7 @@ const OurExpertsContainer = () => (
         <Description hasBars>
             A talented team of cryptocurrency based in london
         </Description>
-        <ul className="w-full">
+        <ul className="flex-wrap justify-between mt-12 w-full sm:flex ">
             <Card
                 image="/team/member1.jpg" 
                 name="Lina Marzouki"
