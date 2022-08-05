@@ -12,7 +12,7 @@ const Blogs = () => (
         <Description hasBars>
             Discover latest news about Bitcoin on our blog
         </Description>
-        <div className="flex flex-col flex-wrap items-stretch justify-between mt-8 sm:px-5 md:flex-row md:px-0">
+        <div className="flex flex-col flex-wrap items-stretch justify-between mt-12 sm:px-5 md:flex-row md:px-0">
             <Card
                 date={<>1<br/>Jan</>}
                 description="incididunt ut labore et dolore magna aliqua. Ut enim aminim veniam, quis nostrud..."

@@ -20,17 +20,19 @@ const Card = ({ date, description, image, title }) => (
                 { date }
             </Typography>
         </Link>
-        <div className="flex flex-col mt-2">
-            <Typography 
-                component="h3"
-                className="text-white">
-                { title }
-            </Typography>
-            <Typography 
-                component="p"
-                className="mt-2 opacity-80 text-white">
-                { description }
-            </Typography>
+        <div className="flex flex-col grow justify-between mt-2">
+            <div>
+                <Typography 
+                    component="h3"
+                    className="text-white">
+                    { title }
+                </Typography>
+                <Typography 
+                    component="p"
+                    className="mt-2 opacity-80 text-white">
+                    { description }
+                </Typography>
+            </div>
             <Link className="mt-6" href="/">
                 <Button className="bg-amber-600 py-2 px-8 rounded-none text-white hover:bg-amber-700 ">
                     Read more
