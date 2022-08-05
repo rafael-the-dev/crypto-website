@@ -14,16 +14,19 @@ const Blogs = () => (
         </Description>
         <div className="flex flex-col flex-wrap items-stretch justify-between mt-8 sm:px-5 md:flex-row md:px-0">
             <Card
+                date={<>1<br/>Jan</>}
                 description="incididunt ut labore et dolore magna aliqua. Ut enim aminim veniam, quis nostrud..."
                 image="/blog/blog-post-1.jpg"
                 title="How cryptocurrency begun and its impact to financial transactions" 
             />
             <Card
+                date={<>17<br/>Mar</>}
                 description="incididunt ut labore et dolore magna aliqua. Ut enim aminim veniam, quis nostrud..."
                 image="/blog/blog-post-2.jpg"
                 title="Cryptocurrency - who are involved with it? Words about members" 
             />
             <Card
+                date={<>25<br/>Feb</>}
                 description="incididunt ut labore et dolore magna aliqua. Ut enim aminim veniam, quis nostrud..."
                 image="/blog/blog-post-3.jpg"
                 title={<>Risks amp; Rewards of invisting in Bitcoin.<br/>Pros and cons</>}

@@ -6,7 +6,7 @@ import classes from "./styles.module.css"
 
 import Link from "src/components/link";
 
-const Card = ({ description, image, title }) => (
+const Card = ({ date, description, image, title }) => (
     <article className={classNames(classes.root, "flex flex-col items-stretch mb-8 md:mb-12")}>
         <Link className={classNames(classes.imageContainer, 'relative')} href="/">
             <Image 
@@ -14,6 +14,11 @@ const Card = ({ description, image, title }) => (
                 layout="fill"
                 src={image}
             />
+            <Typography 
+                component="time"
+                className="absolute bg-neutral-900 left-0 opacity-90 px-2 py-1 text-center text-white top-0">
+                { date }
+            </Typography>
         </Link>
         <div className="flex flex-col mt-2">
             <Typography 
