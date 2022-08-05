@@ -13,6 +13,7 @@ import Guides from "src/components/home/components/guides";
 import AppAdvantages from "src/components/home/components/app-advantages";
 import Packages from "src/components/home/components/packages";
 import Blogs from "src/components/home/components/blogs";
+import OurExperts from "src/components/home/components/our-experts";
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
             <AbousUs />
             <AppAdvantages />
             <Packages />
+            <OurExperts />
             <Blogs />
         </main>
     );
