@@ -85,7 +85,7 @@ const PackagesSection = () => {
     ), [ clickHandler ])
 
     return (
-        <section className="bg-neutral-900 flex flex-col items-center px-5 py-12">
+        <section className="bg-neutral-900 flex flex-col items-center px-5 py-12 sm:pb-32">
             { title }
             { description }
 
