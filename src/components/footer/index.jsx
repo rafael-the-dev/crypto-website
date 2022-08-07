@@ -5,10 +5,10 @@ import ListItem from "./components/list-item";
 import { Typography } from "@mui/material";
 
 const Footer = () => (
-    <footer className="bg-neutral-900 pt-6 pb-12 px-5">
+    <footer className="bg-neutral-900 pt-6 pb-12 px-5 sm:px-[10%] md:px-5">
         <div>
-            <div>
-                <div>
+            <div className="justify-between md:flex">
+                <div className="list-wrapper">
                     <Title>Our company</Title>
                     <ul className="flex flex-wrap mt-6">
                         <ListItem href="/">Home</ListItem>
@@ -19,7 +19,7 @@ const Footer = () => (
                         <ListItem href="/">Contact</ListItem>
                     </ul>
                 </div>
-                <div className="mt-6">
+                <div className="list-wrapper mt-6 md:mt-0">
                     <Title>Help &amp; support</Title>
                     <ul className="flex flex-wrap mt-6">
                         <ListItem href="/">FAQ</ListItem>
@@ -30,7 +30,7 @@ const Footer = () => (
                         <ListItem href="/">Coming soon</ListItem>
                     </ul>
                 </div>
-                <div className="mt-6">
+                <div className="list-wrapper mt-6 md:mt-0">
                     <Title>Contact us</Title>
                     <div className="opacity-90 text-white">
                         <Typography 
@@ -47,6 +47,17 @@ const Footer = () => (
                 </div>
             </div>
         </div>
+        <style jsx>
+            {
+                `
+                    @media screen and (min-width: 768px) {
+                        .list-wrapper {
+                            width: 31.33333%;
+                        }
+                    }
+                `
+            }
+        </style>
     </footer>
 );
 

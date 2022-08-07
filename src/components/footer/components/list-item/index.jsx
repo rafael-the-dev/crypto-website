@@ -13,6 +13,12 @@ const ListItem = ({ children, href }) => (
                     .list-item {
                         width: 50%;
                     }
+
+                    @media screen and (min-width: 768px) {
+                       .list-item {
+                            width: 100%;
+                       }
+                    }
                 `
             }
         </style>
