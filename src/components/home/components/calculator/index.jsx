@@ -4,7 +4,7 @@ import Description from "src/components/description";
 import Textfield from "./components/textfield";
 
 const Calculator = () => (
-    <section className="bg-cover bg-center bg-no-repeat calculator-root-container sm:px-5">
+    <section className="bg-cover bg-center bg-no-repeat calculator-root-container sm:relative sm:px-5">
         <div className="bg-neutral-800 calculator-container flex-col items-center justify-center py-12 px-5 sm:absolute sm:flex sm:py-0 md:py-20 ">
             <Title>
                 <span className="text-amber-600">Bitcoin</span> calculator
