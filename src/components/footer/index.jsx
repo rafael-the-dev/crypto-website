@@ -1,3 +1,8 @@
+import { IconButton } from "@mui/material";
+
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 import Link from "../link";
 import Title from "./components/title";
@@ -44,6 +49,17 @@ const Footer = () => (
                             Mon-Sat 08Am ⇾ 05Pm
                         </Typography>
                     </div>
+                    <ul className="flex mt-6">
+                        <li className="mr-3">
+                            <IconButton className="bg-neutral-800 text-white"><FacebookIcon /></IconButton>
+                        </li>
+                        <li className="mr-3">
+                            <IconButton className="bg-neutral-800 text-white"><TwitterIcon /></IconButton>
+                        </li>
+                        <li>
+                            <IconButton className="bg-neutral-800 text-white"><LinkedInIcon /></IconButton>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
