@@ -1,12 +1,16 @@
 import Header from "src/components/header";
 import Footer from "src/components/footer";
+import GetStarted from "src/components/get-started";
 
 const LayoutContainer = ({ children }) => {
     
     return (
         <div className="root">
             <Header />
-            { children }
+            <main>
+                { children }
+                <GetStarted />
+            </main>
             <Footer />
         </div>
     );

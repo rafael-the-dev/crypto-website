@@ -15,11 +15,10 @@ import Packages from "src/components/home/components/packages";
 import Blogs from "src/components/home/components/blogs";
 import OurExperts from "src/components/home/components/our-experts";
 import Calculator from "src/components/home/components/calculator";
-import GetStarted from "src/components/home/components/get-started";
 
 const Home = () => {
     return (
-        <main>
+        <>
             <Hero />
             <Guides />
             <AbousUs />
@@ -28,8 +27,7 @@ const Home = () => {
             <Calculator />
             <OurExperts />
             <Blogs />
-            <GetStarted />
-        </main>
+        </>
     );
 };
 
