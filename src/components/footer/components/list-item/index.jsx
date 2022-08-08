@@ -3,7 +3,7 @@ import Link from "src/components/link";
 const ListItem = ({ children, href }) => (
     <li className="list-item mb-2">
         <Link
-            className="opacity-90 text-white uppercase" 
+            className="opacity-90 text-sm text-white uppercase" 
             href={href}>
             { children }
         </Link>

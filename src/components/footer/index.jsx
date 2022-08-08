@@ -1,4 +1,11 @@
 import { IconButton } from "@mui/material";
+import Image from "next/image";
+
+import AmercianExpress from "public/icons/payment/american-express.png";
+import MasterCard from "public/icons/payment/mastercard.png";
+import Visa from "public/icons/payment/visa.png";
+import Paypal from "public/icons/payment/paypal.png";
+import Maestro from "public/icons/payment/maestro.png"
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -7,6 +14,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Link from "../link";
 import Title from "./components/title";
 import ListItem from "./components/list-item";
+import Hightlight from "./components/highlight";
 import { Typography } from "@mui/material";
 
 const Footer = () => (
@@ -40,12 +48,12 @@ const Footer = () => (
                     <div className="opacity-90 text-white">
                         <Typography 
                             component="address"
-                            className="leading-7 mt-6 uppercase">
+                            className="leading-7 mt-6 text-sm uppercase">
                             CONTACT@WEBSITE.COM<br/>00216 21 184 010<br/>London, England
                         </Typography>
                         <Typography 
                             component="time"
-                            className="uppercase">
+                            className=" text-sm uppercase">
                             Mon-Sat 08Am ⇾ 05Pm
                         </Typography>
                     </div>
@@ -58,6 +66,50 @@ const Footer = () => (
                         </li>
                         <li>
                             <IconButton className="bg-neutral-800 text-white"><LinkedInIcon /></IconButton>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className="mt-8">
+                <div className="flex flex-wrap justify-between">
+                    <Hightlight
+                        description="Market cap"
+                        title="$198.76B" 
+                    />
+                    <Hightlight
+                        description="Daily transactions"
+                        title="243K" 
+                    />
+                    <Hightlight
+                        description="Active accounts"
+                        title="369K" 
+                    />
+                    <Hightlight
+                        description="Supported countries"
+                        title="127" 
+                    />
+                </div>
+                <div className="flex flex-col mt-3">
+                    <Typography
+                        component="h2"
+                        className="font-bold opacity-90 text-white text-lg uppercase">
+                        Supported payment methods
+                    </Typography>
+                    <ul className="flex mt-4">
+                        <li className="mr-2">
+                            <Image alt="amercian express bank" src={AmercianExpress} />
+                        </li>
+                        <li className="mr-2">
+                            <Image alt="master card" src={MasterCard} />
+                        </li>
+                        <li className="mr-2">
+                            <Image alt="visa payment" src={Visa} />
+                        </li>
+                        <li className="mr-2">
+                            <Image alt="paypal payment" src={Paypal} />
+                        </li>
+                        <li>
+                            <Image alt="maestro payment" src={Maestro} />
                         </li>
                     </ul>
                 </div>
