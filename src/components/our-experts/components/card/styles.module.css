@@ -1,0 +1,17 @@
+.imageContainer > span {
+    height: 350px !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .card {
+        width: 23.5%;
+    }
+}
