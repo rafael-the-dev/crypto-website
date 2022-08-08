@@ -18,7 +18,7 @@ import Hightlight from "./components/highlight";
 import { Typography } from "@mui/material";
 
 const Footer = () => (
-    <footer className="bg-neutral-900 pt-6 pb-12 px-5 sm:px-[10%] md:px-5">
+    <footer className="bg-neutral-900 pt-12 sm:pt-16 pb-12 px-5 sm:px-[10%] md:px-5">
         <div className="info justify-between">
             <div className="grow justify-between md:flex">
                 <div className="list-wrapper">
