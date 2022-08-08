@@ -19,8 +19,8 @@ import { Typography } from "@mui/material";
 
 const Footer = () => (
     <footer className="bg-neutral-900 pt-6 pb-12 px-5 sm:px-[10%] md:px-5">
-        <div>
-            <div className="justify-between md:flex">
+        <div className="info justify-between">
+            <div className="grow justify-between md:flex">
                 <div className="list-wrapper">
                     <Title>Our company</Title>
                     <ul className="flex flex-wrap mt-6">
@@ -70,7 +70,7 @@ const Footer = () => (
                     </ul>
                 </div>
             </div>
-            <div className="mt-8">
+            <div className="mt-8 payments-container">
                 <div className="flex flex-wrap justify-between">
                     <Hightlight
                         description="Market cap"
@@ -89,7 +89,7 @@ const Footer = () => (
                         title="127" 
                     />
                 </div>
-                <div className="flex flex-col mt-3">
+                <div className="border-t border-solid border-stone-700 flex flex-col mt-3 pt-4">
                     <Typography
                         component="h2"
                         className="font-bold opacity-90 text-white text-lg uppercase">
@@ -115,12 +115,34 @@ const Footer = () => (
                 </div>
             </div>
         </div>
+        <div className="border-t border-solid border-stone-700 mt-12 pt-4">
+            <Typography className="opacity-80 text-white md:text-center">
+                { new Date(Date.now()).getFullYear() }
+            </Typography>
+        </div>
         <style jsx>
             {
                 `
                     @media screen and (min-width: 768px) {
                         .list-wrapper {
                             width: 31.33333%;
+                        }
+                    }
+
+                    @media screen and (min-width: 990px) {
+                        .info {
+                            display: flex;
+                        }
+
+                        .payments-container {
+                            margin-top: 0;
+                        }
+                    }
+
+                    @media screen and (min-width: 1151px) {
+                        .payments-container {
+                            margin-left: 7%;
+                            width: 40%;
                         }
                     }
                 `
