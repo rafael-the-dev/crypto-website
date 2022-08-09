@@ -15,20 +15,7 @@ import aboutImage from "public/about-us.png"
 
 const Container = () => (
     <>
-        <Hero>
-            <Title>About <span className="text-amber-600">us</span></Title>
-            <div className="before:bg-white before:block info">
-                <div className="flex items-center text-white uppercase">
-                    <Link
-                        className="text-amber-500"
-                        href="/">
-                        Home
-                    </Link>
-                    <span className="mx-2">/</span>
-                    <Typography>About</Typography>
-                </div>
-            </div>
-        </Hero>
+        <Hero pageName="About" />
         <div className="bg-neutral-900 items-stretch justify-center pt-16 pb-8 px-5 row sm:pb-12 md:pb-28">
             <div className="flex items-center justify-center">
                 <Image 
@@ -131,13 +118,6 @@ const Container = () => (
         <style jsx>
             {
                 `
-                    .info::before {
-                        content: "" !important;
-                        height: 3px;
-                        margin: 2rem auto 1.2rem auto;
-                        width: 80%;
-                    }
-                    
                     @media screen and (min-width: 600px) {
                         .numbers-root-container {
                             height: 380px;
