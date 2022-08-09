@@ -41,6 +41,27 @@ a {
   display: inline-block;
 }
 
+@media screen and (min-width: 600px) {
+  .before-after-border::before, .before-after-border::after {
+      bottom: 0;
+      border-bottom: 30px solid #171717;
+      content: "";
+      height: 15px;
+      position: absolute;
+      width: 50%;
+  }
+
+  .before-after-border::before {
+      border-right: 125px solid transparent;
+      left: 0;
+  }
+
+  .before-after-border::after {
+      border-left: 125px solid transparent;
+      right: 0;
+  }
+}
+
 @media screen  and (min-width: 900px){
   
 }
