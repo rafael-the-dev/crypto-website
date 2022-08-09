@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Button, Hidden, Typography } from "@mui/material";
 import classNames from 'classnames';
 import Image from "next/image";
 
@@ -9,7 +9,7 @@ import Title from "src/components/title";
 import Description from "src/components/description";
 import Link from "src/components/link";
 import OurExperts from "src/components/our-experts";
-
+import Highlight from "src/components/about/components/number-highlight";
 
 import aboutImage from "public/about-us.png"
 
@@ -78,6 +78,27 @@ const Container = () => (
                 <Description>
                     Leading cryptocurrency exchange since day one of bitcoin distribuition
                 </Description>
+                <div className="flex-wrap justify-between mt-8 mb-4 w-full sm:flex lg:items-center lg:my-16">
+                    <Highlight
+                        description="Market cap"
+                        title="$198.76B" 
+                    />
+                    <Hidden smDown><span className="separator"></span></Hidden>
+                    <Highlight
+                        description="Daily transactions"
+                        title="243K" 
+                    />
+                    <Hidden lgDown><span className="separator"></span></Hidden>
+                    <Highlight
+                        description="Active accounts"
+                        title="369K" 
+                    />
+                    <Hidden smDown><span className="separator"></span></Hidden>
+                    <Highlight
+                        description="Supported countries"
+                        title="127" 
+                    />
+                </div>
                 <div className="flex flex-col items-center mt-8 sm:flex-row">
                     <Link
                         className="w-full sm:w-auto" 
@@ -119,17 +140,25 @@ const Container = () => (
                     
                     @media screen and (min-width: 600px) {
                         .numbers-root-container {
-                            height: 300px;
+                            height: 380px;
                         }
 
                         .numbers-container {
-                            height: 420px;
+                            height: 490px;
                             left: 50%;
                             position: absolute;
                             top: 50%;
                             transform: translate(-50%, -50%);
                             width: 90%;
                             z-index: 9;
+                        }
+
+                        .separator {
+                            background-color: #FFF;
+                            height: 45%;
+                            opacity: .2;
+                            transform: rotate(24deg);
+                            width: 1px;
                         }
                     }
 
@@ -142,6 +171,12 @@ const Container = () => (
                             margin-left: 5%;
                             margin-top: 0;
                             width: 55%;
+                        }
+                    }
+
+                    @media screen and (min-width: 1024px) {
+                        .separator {
+                            height: 100%;
                         }
                     }
                 `
