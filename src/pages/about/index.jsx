@@ -78,6 +78,32 @@ const Container = () => (
                 <Description>
                     Leading cryptocurrency exchange since day one of bitcoin distribuition
                 </Description>
+                <div className="flex flex-col items-center mt-8 sm:flex-row">
+                    <Link
+                        className="w-full sm:w-auto" 
+                        href="/">
+                        <Button 
+                            className="bg-transparent border-amber-600 py-2 rounded-none text-amber-600 w-full
+                            hover:bg-amber-700 hover:text-white"
+                            variant="outlined">
+                            See pricing
+                        </Button>
+                    </Link>
+                    <Typography
+                        className={classNames(`my-4 sm:mx-6 sm:my-0 opacity-70  text-white`)}>
+                        or
+                    </Typography>
+                    <Link
+                        className="w-full sm:w-auto" 
+                        href="/">
+                        <Button 
+                            className="bg-amber-600 py-2 rounded-none text-white
+                            hover:bg-amber-700 w-full"
+                            variant="contained">
+                            Register now
+                        </Button>
+                    </Link>
+                </div>
             </div>
         </section>
         <OurExperts />
