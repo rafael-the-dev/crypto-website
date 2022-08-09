@@ -7,7 +7,7 @@ const LayoutContainer = ({ children }) => {
     return (
         <div className="root">
             <Header />
-            <main>
+            <main className="bg-neutral-900">
                 { children }
                 <GetStarted />
             </main>
