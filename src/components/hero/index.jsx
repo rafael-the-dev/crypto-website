@@ -4,13 +4,14 @@ const Hero = ({ children }) => {
 
     return (
         <section 
-            className={classNames("before-after-border bg-cover bg-center bg-no-repeat flex items-center justify-center hero")}>
+            className="before-after-border bg-cover bg-center bg-no-repeat flex flex-col items-center 
+            justify-center hero relative">
             { children }
             <style jsx>
                 {
                     `
                         .hero {
-                            background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .5)), url(/backgrounds/bg-banner.jpg);
+                            background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/backgrounds/bg-banner.jpg);
                             height: 280px;
                         }
                     `
