@@ -34,7 +34,7 @@ const Container = () => {
     return (
         <>
             <Hero pageName="Services" />
-            <ul className="px-5 py-12">
+            <ul className="flex-wrap justify-between px-5 py-20 sm:px-[10%] md:flex md:px-5">
                 {
                     cardsList.map((item, index) => <Card key={index} { ...item } /> )
                 }
