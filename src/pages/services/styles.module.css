@@ -1,0 +1,23 @@
+.bitcoinEscrow::before {
+    background-image: url(/icons/orange/download-bitcoin.png);
+}
+
+.bitcoinMining::before {
+    background-image: url(/icons/orange/add-bitcoins.png);
+}
+
+.softwareDevelopment::before {
+    background-image: url(/icons/orange/buy-sell-bitcoins.png);
+}
+
+.bitcoinTransaction::before {
+    background-image: url(/icons/orange/strong-security.png);
+}
+
+.bitcoinExchange::before {
+    background-image: url(/icons/orange/world-coverage.png);
+}
+
+.bitcoinInvestment::before {
+    background-image: url(/icons/orange/payment-options.png);
+}
