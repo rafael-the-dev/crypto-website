@@ -34,7 +34,7 @@ const Hero = ({ pageName, title  }) => {
                             height: 2px;
                             margin: 2rem auto 1.2rem auto;
                             opacity: .9;
-                            width: 80%;
+                            width: 60%;
                         }
 
                         @media screen and (min-width: 768px) {
