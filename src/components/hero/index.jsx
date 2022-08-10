@@ -3,13 +3,13 @@ import { Typography } from "@mui/material";
 import Title from "src/components/title";
 import Link from "src/components/link";
 
-const Hero = ({ pageName }) => {
+const Hero = ({ pageName, title  }) => {
 
     return (
         <section 
             className="before-after-border bg-cover bg-center bg-no-repeat flex flex-col items-center 
             justify-center hero relative">
-            <Title>About <span className="text-amber-600">us</span></Title>
+            <Title>{ title }</Title>
             <div className="before:bg-white before:block info">
                 <div className="flex items-center text-white uppercase">
                     <Link
@@ -35,6 +35,12 @@ const Hero = ({ pageName }) => {
                             margin: 2rem auto 1.2rem auto;
                             opacity: .9;
                             width: 80%;
+                        }
+
+                        @media screen and (min-width: 768px) {
+                            .hero {
+                                height: 350px;
+                            }
                         }
                     `
                 }

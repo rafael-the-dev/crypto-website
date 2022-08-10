@@ -15,7 +15,7 @@ import aboutImage from "public/about-us.png"
 
 const Container = () => (
     <>
-        <Hero pageName="About" />
+        <Hero pageName="About" title={<>About <span className="text-amber-600">us</span></>} />
         <div className="bg-neutral-900 items-stretch justify-center pt-16 pb-8 px-5 row sm:pb-12 md:pb-28">
             <div className="flex items-center justify-center">
                 <Image 
