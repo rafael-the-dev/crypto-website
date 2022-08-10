@@ -31,8 +31,9 @@ const Hero = ({ pageName }) => {
 
                         .info::before {
                             content: "" !important;
-                            height: 3px;
+                            height: 2px;
                             margin: 2rem auto 1.2rem auto;
+                            opacity: .9;
                             width: 80%;
                         }
                     `
