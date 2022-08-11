@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Button, Collapse } from "@mui/material"
+import { Button, Collapse } from "@mui/material";
 
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
@@ -11,6 +11,7 @@ const SublistContainer = ({ label, list }) => {
     const [ open, setOpen ] = useState(false);
 
     const toggleState = useCallback(() => setOpen(b => !b), []);
+    const clickHandler = useCallback(() => setOpen(false), []);
 
     return (
         <li className="flex flex-col items-center mb-4 text-white hover:text-amber-600 last:mb-0 md:mb-0 md:mr-4 md:items-stretch lg:mr-6">
@@ -29,10 +30,12 @@ const SublistContainer = ({ label, list }) => {
                 )}>
                     {
                         list.map((item, index) => (
-                            <li className="mb-3 text-white last:mb-0 md:mb-0 md:py-2 md:px-4 md:w-full hover:bg-neutral-800 hover:text-amber-600" key={index}>
+                            <li 
+                                className="mb-3 text-white last:mb-0 md:mb-0 md:py-2 md:px-4 md:w-full hover:bg-neutral-800 hover:text-amber-600" key={index}>
                                 <Link 
                                     className="opacity-80 text-inherit text-sm uppercase"
-                                    href={item.href}>
+                                    href={item.href}
+                                    onClick={clickHandler}>
                                     { item.label }
                                 </Link>
                             </li>

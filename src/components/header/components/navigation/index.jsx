@@ -1,13 +1,16 @@
 import classNames  from "classnames";
-import { Typography } from "@mui/material";
-import Link from "src/components/link"
+import Link from "src/components/link";
+import { useRouter } from "next/router";
+import { useMemo } from "react"
 
 import classes from "./styles.module.css";
 
 import SubList from "./components/sub-list";
 
 const Navigation = ({ closeHandler, open }) => {
-    const list = [
+    const { pathname } = useRouter();
+
+    const list = useMemo(() => [
         { label: "Home", href: "/" },
         { label: "About us", href: "about" },
         { label: "Services", href: "services" },
@@ -26,16 +29,22 @@ const Navigation = ({ closeHandler, open }) => {
             { label: "404 page", href: "/" },
         ] },
         { label: "Contact", href: "contact" }
-    ];
+    ]);
+
+    const getPathname = (href) => {
+        return href === "/" ? href : `/${href}`;
+    };
 
     const genetateList = () => list.map((item, index) => (
         item.list ? <SubList key={index} { ...item } /> : (
             <li 
                 key={index} 
-                className="mb-4 text-white hover:text-amber-600 last:mb-0 md:mb-0 md:mr-4 md:last:mr-0 lg:mr-6">
+                className={classNames( pathname === getPathname(item.href) ? "text-amber-600" : "text-white",
+                    "mb-4 hover:text-amber-600 last:mb-0 md:mb-0 md:mr-4 md:last:mr-0 lg:mr-6")}>
                 <Link 
                     className="text-inherit uppercase md:text-sm"
-                    href={item.href}>
+                    href={item.href}
+                    onClick={closeHandler}>
                     { item.label }
                 </Link>
             </li>
