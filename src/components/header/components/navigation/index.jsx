@@ -28,8 +28,8 @@ const Navigation = ({ closeHandler, open }) => {
             { label: "FAQ page", href: "/" },
             { label: "404 page", href: "/" },
         ] },
-        { label: "Contact", href: "contact" }
-    ]);
+        { label: "Contact", href: "/" }
+    ], []);
 
     const getPathname = (href) => {
         return href === "/" ? href : `/${href}`;

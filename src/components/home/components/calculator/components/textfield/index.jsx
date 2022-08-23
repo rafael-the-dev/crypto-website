@@ -54,4 +54,6 @@ const Textfield = forwardRef(({ label, onChange }, ref) => {
     );
 });
 
+Textfield.displayName = "Textfield";
+
 export default Textfield;

@@ -46,7 +46,7 @@ const Header = () => {
             onClick={toggleSearch}>
             { openSearch ? <CloseIcon className="text-red-700 hover:text-red-500" /> : <SearchIcon className="text-white hover:text-amber-700" /> }
         </IconButton>
-    ), [ openSearch ]);
+    ), [ openSearch, toggleSearch ]);
 
     const searchForm = useMemo(() => <Hidden mdDown><SearchForm toggleRef={toggleSearchRef} /></Hidden>, [])
     
@@ -78,7 +78,7 @@ const Header = () => {
                 secondRowRef.current.classList.add("md:flex");
             }
         }
-    }, []);
+    }, [ hasClass ]);
 
     const resizeHandler = useCallback(() => {
         if(window.scrollY <= 80) {
@@ -88,7 +88,7 @@ const Header = () => {
             if(hasClass({ element: firstRowRef.current, classname: "hidden" }))
                 firstRowRef.current.classList.remove("hidden");
         }
-    }, []);
+    }, [ hasClass ]);
 
     /*useEffect(() => {
         window.addEventListener("scroll", scrollHandler);

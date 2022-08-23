@@ -14,6 +14,7 @@
 
 @media screen and (min-width: 990px) {
     .container {
+        margin-bottom: 0;
         width: 32.333%;
     }
 }
